@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+    list-style: none;
+    text-decoration: none;
+    background:rgb(0, 0, 0);
+    font-family: 'Metal Mania', cursive;
+}
+section{
+    padding: 50px 100px;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    padding: 18px 100px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: brown;
+    text-transform: uppercase;
+}
+.logo .bx{
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    padding: 8px 17px;
+    color: wheat;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.navbar a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 1px;
+    background: rgb(255, 255, 255);
+}
+.navbar a:hover::after{
+    left: 0;
+    width: 100%;
+}
+#menu-icon{
+    font-size: 24px;
+    color: wheat;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+.header-icon{
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    column-gap: 0.8rem;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+.header-icon .bx{
+    color: black;
+    padding: 7px;
+    background: rgb(255, 255, 255);
+    border-radius: 0.4rem;
+}
+/* +hoveri aq*/
+.header-icon{
+    position: relative;
+}
+.header-icon span{
+    position: absolute;
+    top: -7px;
+    right: 7px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 250, 250);
+    font-size: 0.6rem;
+    font-weight: 500;
+}
+.search-box{
+    position: absolute;
+    top: 110%;
+    right: -100%;
+    width: 250px; 
+}
+.search-box input{
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+}
+.search-box input::placeholder{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.search-box.active{
+    right: 1rem;
+    transition: 0.2s all linear;
+}
+.home{
+    width: 100%;
+    min-height: 740px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+    gap: 1.5rem;
+}
+.home-text h3{
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+}
+.home-text h1{
+    font-size: 3.4rem;
+    letter-spacing: 1px;
+    color: white;
+}
+.home-text p{
+    max-width: 80%;
+    font-size: 0.938rem;
+    margin: 00.5rem 0 1.5rem;
+    color: white;
+}
+.btn{
+    padding: 10px 40px;
+    border-radius: 0.3rem;
+    background-color: rgb(5, 92, 5);
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+.btn:hover{
+    background: rgb(9, 155, 9);
+}
+.shop-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+    color: white;
+    margin-top: 50px;
+}
+.product-box:hover {
+    padding: 10px;
+    border: 1px solid white;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.product-box img{
+    width: 250px;
+    height: auto;
+}
+#cart{
+    margin-left: 175px;
+    background: darkgreen;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+}
+.add-cart {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: darkgreen;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+}
+.small-container{
+    max-width: 1000px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 20px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.single-product{
+    margin-top: 80px;
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+.single-product .col-2 img{
+    padding: 0;
+}
+.single-product .col-2{
+    padding: 20px;
+}
+.col-2{
+    color: white;
+    flex-basis: 50%;
+    min-width: 300px;
+
+}
+.cart-btn{
+    display: inline-block;
+    background: rgb(1, 70, 1);
+    color: wheat;
+    padding: 8px 30px;
+    margin: 30px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.cart-btn:hover{
+    background: green;
+}
+#check{
+    color: green;
+}
+.footer{
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    gap: 1.5rem;
+}
+.home-icon{
+    color: wheat;
+}
+.phone-icon{
+    color: wheat;
+}
+.footer-box a{
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+.social{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+.social a .bx{
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 30px;
+}
+.footer-box h3{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+#contacts{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+#contact span{
+    display: flex;
+    align-items: center;
+}
+#contact i{
+    font-size: 20px;
+}
+.loginbox{
+    width: 320px;
+    height: 420px;
+    background: #000;
+    color: white;
+    margin-top: 10%;
+    margin-left: 40%;
+    position: absolute;
+}
+.avatar{
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    position: absolute;    
+    left: calc(40% - 50px);
+    box-sizing: border-box;
+}
+.login-text{
+    margin: 0;
+    padding-bottom: 20px;
+    padding-left: 110px;
+    font-size: 22px;
+}
+.login-enter{
+    font-size: 18px;
+    color: white;
+    margin-left: 20px;
+    width: 200px;
+    height: 32px;
+}
+form a:hover{
+    color: aqua;
+}
+#login-btn{
+    display: inline-block;
+    background: rgb(1, 70, 1);
+    color: wheat;
+    padding: 5px 30px;
+    margin: 30px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.registration-text{
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 22px;
+}
+.about-p{
+    color: darkgreen;
+}
+#about-photo{
+    width: 500px;
+    height: auto;
+}
